@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Interactive Webpage</title>
+    <style>
+        #myDiv {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            margin: 20px;
+            padding: 10px;
+            text-align: center; /* Center text within the div */
+            transition: background-color 0.5s ease; /* Smooth transition for background color */
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Interactive Webpage</h1>
+
+    <div id="myDiv">
+        <p id="myParagraph">This is some text.</p>
+    </div>
+
+    <button onclick="changeText()">Change Text</button>
+    <button onclick="changeStyle()">Change Style</button>
+    <button onclick="toggleElement()">Toggle Element</button>
+
+    <div id="toggleableElement" class="hidden">
+        <p>This element can be toggled!</p>
+    </div>
+
+
+    <script>
+        function changeText() {
+            document.getElementById("myParagraph").textContent = "Text has been changed!";
+        }
+
+        function changeStyle() {
+            const myDiv = document.getElementById("myDiv");
+            myDiv.style.backgroundColor = "lightcoral"; // Change background color
+            myDiv.style.fontSize = "20px"; // Change font size
+        }
+
+        function toggleElement() {
+            const element = document.getElementById("toggleableElement");
+            element.classList.toggle("hidden"); // Toggle the 'hidden' class
+        }
+
+
+    </script>
+
+
+</body>
+</html>
